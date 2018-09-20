@@ -33,5 +33,6 @@ RUN tar -zxvf /home/user/tarball/GipsyX-rc0.2-Linux-Centos7-avx.tgz -C /home/use
 RUN sh -c 'echo "#for gipsy" >> ~/.bashrc' \
     && sh -c 'echo "source $HOME/GipsyX-rc0.2/rc_GipsyX.sh" >> ~/.bashrc'
 
+WORKDIR /home/user
 RUN bash --login -c "cd /home/user/GipsyX-rc0.2/ && ./verify.py"
 
